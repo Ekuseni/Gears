@@ -5,19 +5,29 @@ public class Crank : Gear, IDragHandler
 {
     private Camera mainCamera;
 
+#if UNITY_EDITOR
+    [SerializeField] private bool autoRotate;
+    [SerializeField] private float autoRotateSpeed;
+#endif
+    
     private void Start()
     {
         mainCamera = Camera.main;
     }
-
+    
+#if UNITY_EDITOR
     void Update()
     {
-        Rotate(10 * Time.deltaTime, this);
+        if(!autoRotate) return;
+        
+        Rotate(autoRotateSpeed * Time.deltaTime, this);
     }
+#endif
+    
 
     public void OnDrag(PointerEventData eventData)
     {
-       Vector2 pivotScreenPoint = mainCamera.WorldToScreenPoint(transform.position + transform.localRotation * localPivotPoint);
+       Vector2 pivotScreenPoint = mainCamera.WorldToScreenPoint(globalPivotPoint);
        Vector2 mouseScreenPoint = Input.mousePosition;
        Vector2 lastMouseScreenPoint = mouseScreenPoint - eventData.delta;
        
