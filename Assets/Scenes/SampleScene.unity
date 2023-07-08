@@ -355,11 +355,66 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
+--- !u!1 &741014149741227220 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6473231096464067517, guid: efa76a9f5674faa45a6010915b270e30, type: 3}
+  m_PrefabInstance: {fileID: 6024995051147224937}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &775762549640084172 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6438206820598472101, guid: efa76a9f5674faa45a6010915b270e30, type: 3}
   m_PrefabInstance: {fileID: 6024995051147224937}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &4133676516135167892 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7692378993034625277, guid: efa76a9f5674faa45a6010915b270e30, type: 3}
+  m_PrefabInstance: {fileID: 6024995051147224937}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5164708320787436851 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1455137433918632538, guid: efa76a9f5674faa45a6010915b270e30, type: 3}
+  m_PrefabInstance: {fileID: 6024995051147224937}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5396615241296734335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4133676516135167892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4968417f548257c46949b42e296f8ad0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localRotationAxis: {x: 0, y: 0, z: 0.70710677, w: 0.70710677}
+  localPivotPoint: {x: 0, y: 0, z: 0}
+  gearRadius: 0.38
+  connections:
+  - ConnectedGear: {fileID: 7874783356728053047}
+    Shaft: 0
+    ClutchEngaged: 0
+    SharedModel: 0
+--- !u!114 &5620551620940190459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 741014149741227220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4968417f548257c46949b42e296f8ad0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localRotationAxis: {x: 0, y: 0, z: 0.70710677, w: 0.70710677}
+  localPivotPoint: {x: 0, y: 0, z: 0}
+  gearRadius: 0.38
+  connections:
+  - ConnectedGear: {fileID: 7026019593320209080}
+    Shaft: 0
+    ClutchEngaged: 0
+    SharedModel: 0
 --- !u!1001 &6024995051147224937
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -421,6 +476,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: efa76a9f5674faa45a6010915b270e30, type: 3}
+--- !u!1 &7026019593320209079 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3610895742854823390, guid: efa76a9f5674faa45a6010915b270e30, type: 3}
+  m_PrefabInstance: {fileID: 6024995051147224937}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7026019593320209080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7026019593320209079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4968417f548257c46949b42e296f8ad0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localRotationAxis: {x: 0, y: 0, z: 0.70710677, w: 0.70710677}
+  localPivotPoint: {x: 0, y: 0, z: 0}
+  gearRadius: 0.38
+  connections:
+  - ConnectedGear: {fileID: 7874783356728053046}
+    Shaft: 0
+    ClutchEngaged: 0
+    SharedModel: 0
+  - ConnectedGear: {fileID: 5620551620940190459}
+    Shaft: 0
+    ClutchEngaged: 0
+    SharedModel: 0
 --- !u!114 &7571793250573086381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -433,8 +517,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43f74d10f904f0c489035234dcc8f949, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axisOfRotation: {x: 0, y: 0, z: 0.70710677, w: 0.70710677}
-  pivotPoint: {x: 6.31, y: 0, z: 0}
+  localRotationAxis: {x: 0, y: 0, z: 0.70710677, w: 0.70710677}
+  localPivotPoint: {x: 0, y: 1.65, z: 0}
+  gearRadius: 1.06
+  connections:
+  - ConnectedGear: {fileID: 5396615241296734335}
+    Shaft: 1
+    ClutchEngaged: 0
+    SharedModel: 0
+  - ConnectedGear: {fileID: 5620551620940190459}
+    Shaft: 1
+    ClutchEngaged: 1
+    SharedModel: 0
 --- !u!64 &7571793250573086382
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -446,6 +540,54 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -3205943951635007526, guid: 39a017220a227a6438ec60e398d454cd, type: 3}
+--- !u!114 &7874783356728053046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5164708320787436851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4968417f548257c46949b42e296f8ad0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localRotationAxis: {x: 0, y: 0, z: 0.70710677, w: 0.70710677}
+  localPivotPoint: {x: 0, y: 0.8, z: 0}
+  gearRadius: 1.17
+  connections:
+  - ConnectedGear: {fileID: 7874783356728053047}
+    Shaft: 0
+    ClutchEngaged: 0
+    SharedModel: 1
+  - ConnectedGear: {fileID: 7026019593320209080}
+    Shaft: 0
+    ClutchEngaged: 0
+    SharedModel: 0
+--- !u!114 &7874783356728053047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5164708320787436851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4968417f548257c46949b42e296f8ad0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localRotationAxis: {x: 0, y: 0, z: 0.70710677, w: 0.70710677}
+  localPivotPoint: {x: 0, y: -0.87, z: 0}
+  gearRadius: 1.17
+  connections:
+  - ConnectedGear: {fileID: 7874783356728053046}
+    Shaft: 0
+    ClutchEngaged: 0
+    SharedModel: 1
+  - ConnectedGear: {fileID: 5396615241296734335}
+    Shaft: 0
+    ClutchEngaged: 0
+    SharedModel: 0

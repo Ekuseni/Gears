@@ -1,16 +1,18 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class Crank : MonoBehaviour, IDragHandler
+public class Crank : Gear, IDragHandler
 {
-    [SerializeField] Quaternion localRotationAxis;
-    [SerializeField] Vector3 localPivotPoint;
-
     private Camera mainCamera;
 
     private void Start()
     {
         mainCamera = Camera.main;
+    }
+
+    void Update()
+    {
+        Rotate(10 * Time.deltaTime, this);
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -23,13 +25,6 @@ public class Crank : MonoBehaviour, IDragHandler
        Vector2 pivotToLastMouse = lastMouseScreenPoint - pivotScreenPoint;
        
        float angle = Vector2.SignedAngle(pivotToLastMouse, pivotToMouse);
-       transform.RotateAround(transform.position + transform.rotation * localPivotPoint, transform.TransformDirection(localRotationAxis * Vector3.left), angle);
-    }
-    
-    void OnDrawGizmos()
-    {
-        Gizmos.color = Color.magenta;
-        Gizmos.DrawSphere(transform.position + (transform.rotation * localPivotPoint), 0.1f);
-        Gizmos.DrawLine(transform.position + (transform.rotation * localPivotPoint), transform.position + (transform.rotation * localPivotPoint) + transform.TransformDirection(localRotationAxis * Vector3.left));
+       Rotate(angle, this);
     }
 }
