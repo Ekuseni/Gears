@@ -387,14 +387,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4968417f548257c46949b42e296f8ad0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  applyRotationToTransform: 1
   localRotationAxis: {x: 0, y: 0, z: 0.70710677, w: 0.70710677}
   localPivotPoint: {x: 0, y: 0, z: 0}
+  connectedDrivetrainElements:
+  - {fileID: 7874783356728053047}
+  angularVelocity: 0
   gearRadius: 0.38
-  connections:
-  - ConnectedGear: {fileID: 7874783356728053047}
-    Shaft: 0
-    ClutchEngaged: 0
-    SharedModel: 0
 --- !u!114 &5620551620940190459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -407,14 +406,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4968417f548257c46949b42e296f8ad0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  applyRotationToTransform: 1
   localRotationAxis: {x: 0, y: 0, z: 0.70710677, w: 0.70710677}
   localPivotPoint: {x: 0, y: 0, z: 0}
+  connectedDrivetrainElements:
+  - {fileID: 7026019593320209080}
+  angularVelocity: 0
   gearRadius: 0.38
-  connections:
-  - ConnectedGear: {fileID: 7026019593320209080}
-    Shaft: 0
-    ClutchEngaged: 0
-    SharedModel: 0
 --- !u!1001 &6024995051147224937
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -493,18 +491,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4968417f548257c46949b42e296f8ad0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  applyRotationToTransform: 1
   localRotationAxis: {x: 0, y: 0, z: 0.70710677, w: 0.70710677}
   localPivotPoint: {x: 0, y: 0, z: 0}
+  connectedDrivetrainElements:
+  - {fileID: 7874783356728053046}
+  - {fileID: 5620551620940190459}
+  angularVelocity: 0
   gearRadius: 0.38
-  connections:
-  - ConnectedGear: {fileID: 7874783356728053046}
-    Shaft: 0
-    ClutchEngaged: 0
-    SharedModel: 0
-  - ConnectedGear: {fileID: 5620551620940190459}
-    Shaft: 0
-    ClutchEngaged: 0
-    SharedModel: 0
 --- !u!114 &7571793250573086381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -517,18 +511,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43f74d10f904f0c489035234dcc8f949, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  applyRotationToTransform: 1
   localRotationAxis: {x: 0, y: 0, z: 0.70710677, w: 0.70710677}
   localPivotPoint: {x: 0, y: 1.65, z: 0}
+  connectedDrivetrainElements:
+  - {fileID: 7571793250573086383}
+  - {fileID: 7571793250573086384}
+  angularVelocity: 0
   gearRadius: 1.06
-  connections:
-  - ConnectedGear: {fileID: 5396615241296734335}
-    Shaft: 1
-    ClutchEngaged: 0
-    SharedModel: 0
-  - ConnectedGear: {fileID: 5620551620940190459}
-    Shaft: 1
-    ClutchEngaged: 1
-    SharedModel: 0
+  autoRotate: 1
+  autoRotateSpeed: 20
 --- !u!64 &7571793250573086382
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -543,6 +535,44 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -3205943951635007526, guid: 39a017220a227a6438ec60e398d454cd, type: 3}
+--- !u!114 &7571793250573086383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775762549640084172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac6edd80187bd4e4babcf16d1fb7c675, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  applyRotationToTransform: 0
+  localRotationAxis: {x: 0, y: 0, z: 0, w: 0}
+  localPivotPoint: {x: 0, y: 0, z: 0}
+  connectedDrivetrainElements:
+  - {fileID: 5620551620940190459}
+  angularVelocity: 0
+  clutchEngagementRatio: 1
+--- !u!114 &7571793250573086384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775762549640084172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac6edd80187bd4e4babcf16d1fb7c675, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  applyRotationToTransform: 0
+  localRotationAxis: {x: 0, y: 0, z: 0, w: 0}
+  localPivotPoint: {x: 0, y: 0, z: 0}
+  connectedDrivetrainElements:
+  - {fileID: 5396615241296734335}
+  angularVelocity: 0
+  clutchEngagementRatio: 0
 --- !u!114 &7874783356728053046
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -555,18 +585,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4968417f548257c46949b42e296f8ad0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  applyRotationToTransform: 1
   localRotationAxis: {x: 0, y: 0, z: 0.70710677, w: 0.70710677}
   localPivotPoint: {x: 0, y: 0.8, z: 0}
+  connectedDrivetrainElements:
+  - {fileID: 7874783356728053048}
+  - {fileID: 7026019593320209080}
+  angularVelocity: 0
   gearRadius: 1.17
-  connections:
-  - ConnectedGear: {fileID: 7874783356728053047}
-    Shaft: 0
-    ClutchEngaged: 0
-    SharedModel: 1
-  - ConnectedGear: {fileID: 7026019593320209080}
-    Shaft: 0
-    ClutchEngaged: 0
-    SharedModel: 0
 --- !u!114 &7874783356728053047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -579,15 +605,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4968417f548257c46949b42e296f8ad0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  applyRotationToTransform: 0
   localRotationAxis: {x: 0, y: 0, z: 0.70710677, w: 0.70710677}
   localPivotPoint: {x: 0, y: -0.87, z: 0}
+  connectedDrivetrainElements:
+  - {fileID: 5396615241296734335}
+  - {fileID: 7874783356728053048}
+  angularVelocity: 0
   gearRadius: 1.17
-  connections:
-  - ConnectedGear: {fileID: 7874783356728053046}
-    Shaft: 0
-    ClutchEngaged: 0
-    SharedModel: 1
-  - ConnectedGear: {fileID: 5396615241296734335}
-    Shaft: 0
-    ClutchEngaged: 0
-    SharedModel: 0
+--- !u!114 &7874783356728053048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5164708320787436851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7cbd97c230fa144da5ae731369cd91d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  applyRotationToTransform: 0
+  localRotationAxis: {x: 0, y: 0, z: 0, w: 0}
+  localPivotPoint: {x: 0, y: 0, z: 0}
+  connectedDrivetrainElements:
+  - {fileID: 7874783356728053047}
+  - {fileID: 7874783356728053046}
+  angularVelocity: 0
