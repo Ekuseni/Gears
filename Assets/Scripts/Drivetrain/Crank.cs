@@ -2,10 +2,12 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 namespace Drivetrain
 {
+    //It might have been a good idea to classify crank as joint. Or create a new set of classes for power source and power sink if more complex system needs to be implemented
     public class Crank : Gear, IDragHandler
     {
         private Camera mainCamera;
 
+        //Added debug auto rotate so I can test the drivetrain without having to drag the crank
 #if UNITY_EDITOR
     [SerializeField] private bool autoRotate;
     [SerializeField] private float autoRotateSpeed;

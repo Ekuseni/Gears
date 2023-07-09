@@ -37,6 +37,9 @@ namespace Drivetrain
         {
             base.OnDrawGizmos();
         
+            //Draw a mock gear to ease adjusting gear radius in editor
+            //Gizmos are split to two methods if gear is sharing mesh with another gear
+            
             Gizmos.color = Color.cyan;
             int steps = 20;
             Vector3 circleRotation = new Vector3(0, 90, 0);
